@@ -4,8 +4,24 @@ void setup()
 size (500, 500);
 background(255,255,255) ;
 
+//make all under one shape
+noFill();
+stroke(0,0,0);
+strokeWeight(0);
+beginShape();
+vertex(50,200);
+vertex(450,200);
+vertex(450,400);
+vertex(50,400);
+vertex(50,333.333);
+vertex(450,333.333);
+vertex(450,266.666);
+vertex(50,266.666);
+vertex(50,200);
+endShape();
+
+
  //horizontal bars
- noStroke();
  fill(255,0,0);
  rect(50, 200, 400, 33.333);
  fill(255,255,0);
@@ -37,15 +53,6 @@ fill(0,0,0);
   circle( 100, 300, 50);
   
 
-  
+}
  
   
-
-
-
-
-
-
-
-
-}
