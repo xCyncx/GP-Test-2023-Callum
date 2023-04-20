@@ -1,24 +1,28 @@
+float flagX = 0;
+float flagSpeed = 1;
+int lastTime = 0;
 
 void setup()
 {
 size (500, 500);
 background(255,255,255) ;
+}
 
-//make all under one shape
-noFill();
-stroke(0,0,0);
-strokeWeight(0);
-beginShape();
-vertex(50,200);
-vertex(450,200);
-vertex(450,400);
-vertex(50,400);
-vertex(50,333.333);
-vertex(450,333.333);
-vertex(450,266.666);
-vertex(50,266.666);
-vertex(50,200);
-endShape();
+void draw() {
+  background(255,255,255);
+  
+  //move the flag
+  flagX += flagSpeed;
+  
+ int elapsedTime = millis() - lastTime;
+ if (elapsedTime >= 5000) {
+   flagSpeed = -flagSpeed;
+   lastTime = millis();
+ }
+
+//draw the Flag
+pushMatrix();
+translate(flagX, 0);
 
 
  //horizontal bars
@@ -51,8 +55,12 @@ fill(0,0,0);
   strokeWeight(5);
   noFill();
   circle( 100, 300, 50);
-  
+  // bring back to original position
+  popMatrix(); 
+  if(flagX > width - 100 || flagX < 0) {
+    flagSpeed = -flagSpeed;
+    
 
 }
- 
+}
   
