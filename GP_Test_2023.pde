@@ -24,6 +24,20 @@ void draw() {
 pushMatrix();
 translate(flagX, 0);
 
+noFill();
+stroke(0,0,0);
+strokeWeight(0);
+beginShape();
+vertex(50,200);
+vertex(450,200);
+vertex(450,400);
+vertex(50,400);
+vertex(50,333.333);
+vertex(450,333.333);
+vertex(450,266.666);
+vertex(50,266.666);
+vertex(50,200);
+endShape();
 
  //horizontal bars
  fill(255,0,0);
