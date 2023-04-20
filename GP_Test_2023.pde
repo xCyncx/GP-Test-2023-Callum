@@ -2,9 +2,24 @@
 void setup()
 {
 size (500, 500);
-background(255,255,200) ;
+background(255,255,255) ;
 
-
+ //horizontal bars
+ noStroke();
+ fill(255,0,0);
+ rect(50, 200, 400, 33.333);
+ fill(255,255,0);
+ rect(50, 233.333,400, 33.333);
+ fill(0,255,0);
+ rect(50, 266.666,400, 33.333);
+ fill(0,255,255);
+ rect(50, 300,400, 33.333);
+ fill(0,0,255);
+ rect(50, 333.333,400, 33.333);
+ fill(255,0,255);
+ rect(50, 366.666,400, 33.333);
+ 
+//triangles
 noStroke();
 fill(0,0,0);
   triangle( 50, 200, 50, 400, 300, 300);
@@ -14,10 +29,14 @@ fill(0,0,0);
   triangle( 50, 230, 50 , 370, 240, 300);
   fill(255,255,100);
   triangle ( 50, 245, 50, 355, 210, 300);
+  
+  //hollow circle
   stroke(150, 50, 220); 
   strokeWeight(5);
   noFill();
   circle( 100, 300, 50);
+  
+
   
  
   
